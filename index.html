@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Projects</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-content">
+
+    <h1 class="page-title">Welcome to my mini projects:</h1>
+    <div class="projects-grid-parent">
+      
+      <!-- Project 1 -->
+      <div class="project-grid-child" id="project-one">
+        <div class="flex-title">
+          <h1>Image Resizer</h1>
+        </div>
+        <div class="flex-content">
+          <input type="file" id="fileInput" accept="image/*">
+          <div class="dimensions">
+              <label for="width">Width:</label>
+              <input type="number" id="width" placeholder="Width">
+              <label for="height">Height:</label>
+              <input type="number" id="height" placeholder="Height">
+          </div>
+          <button id="resize" class="button">Resize and Save</button>
+          <!-- <canvas id="canvas"></canvas> -->
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-grid-child" id="project-two">
+        <div class="flex-title">
+          <h1>Rock Paper Scissors</h1>
+        </div>
+        <div class="flex-content">
+          <div class="scoreboard">
+            <div>Player Score: <span id="player-score">0</span></div>
+            <div>Computer Score: <span id="computer-score">0</span></div>
+          </div>
+
+          <div class="options-container">
+            <button id="rock-btn">Rock</button>
+            <button id="paper-btn">Paper</button>
+            <button id="scissors-btn">Scissors</button>
+          </div>
+
+          <div class="message-container">
+            <p id="results-msg"></p>
+            <p id="winner-msg" style="font-weight: bold; color: #333;"></p>
+          </div>
+
+          <div>
+            <button id="reset-game-btn" style = "display: none;">Restart Game</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-grid-child" id="project-three">
+        <div class="flex-title">
+          <h1>3D Card</h1>
+        </div>
+
+        <div class="flex-content">
+            <div id="image-container">
+              <img src="/images/paralaxzoom.JPG" />
+            </div> 
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-grid-child" id="project-four">
+        <div class="flex-title">
+          <h1> Electricity costs?</h1>
+        </div>
+
+        <div class="flex-content">
+          <div class="information-board">
+            <div>Costs per day: <span class="currency">€ </span><span id="costs-per-day">0.00</span></div>
+            <div>Costs per month: <span class="currency">€ </span><span id="costs-per-month">0.00</span></div>
+          </div>
+      
+          <div class="input-container">
+            <div class="label-input">
+              <label for="power">Power in Watts:</label>
+              <input type="number" id="power" placeholder="Enter Wattage">
+            </div>
+            <div class="label-input">
+              <label for="duration">Duration (per day in hours):</label>
+              <input type="number" id="duration" placeholder="Enter Hours">
+            </div>
+            <div class="label-input">
+              <label for="price-kwh">Price of Kwh:</label>
+              <input type="number" id="price-kwh" placeholder="Enter Price">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-grid-child" id="project-five">
+        <div class="flex-title">
+          <h1>What will the next project be?</h1>
+        </div>
+
+        <div class="flex-content">
+          <div>
+            <p>text content</p>
+          </div>  
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <footer><li>Design: <a href="https://pierrek93.github.io/Personal-webpage/#" target="blank">Pierre Keane</a></li></footer>
+ 
+ 
+  <script src="ImageResizer.js"></script>
+  <script src="Spsgame.js"></script>
+  <script src="Electricity.js"></script>
+  <script src="cardzoom.js"></script>
+</body>
+
+</html>

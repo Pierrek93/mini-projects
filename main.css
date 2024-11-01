@@ -1,223 +1,124 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* MAIN PAGE */
 html, body {
-  height: 100%; /* Make sure the html and body take the full height */
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #74767a;
-  color: #333;
+  /* background-color: rgb(86, 19, 66); */
+  background-image: url('images/bg.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+  margin: 0;
+  height: 100%;
   display: flex;
-  flex-direction: column; /* Column layout */
-}
-
-.main-content {
-  flex: 1; /* This allows the main content to grow and push the footer down */
-  display: flex;
-  flex-direction: column; /* Ensure content flows vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: flex-start; /* Start at the top */
+  flex-direction: column;
 }
 
 .page-title {
+  background-color: #944cff00;
   text-align: center;
-  margin-top: 20px; /* Adjusts spacing from the top */
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 30px; 
+  color: rgb(255, 221, 0);
+  margin-top: 0.15rem;
+  font-size: 1.5rem;
+  font-family: 'Bad Script', cursive;
 }
 
-h1 {
-  color: whitesmoke;
+.main-content{
+  flex: 1;
+  background-color: rgba(240, 248, 255, 0);
 }
 
-/* Main Projects Grid */
-.projects-grid {
+footer, footer a {
+  background-color: #944cff00;
+  text-align: center;
+  color: rgb(255, 221, 0);
+  margin-top: 0.15rem;
+  font-size: 1.5rem;
+  font-family: 'Bad Script', cursive;
+}
+
+/* MAINGRID AND GRIDCHILDREN */
+.projects-grid-parent {
+  background-color: rgba(157, 60, 60, 0);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* General Styling for Each Project */
-.project-container {
-  background-color: #dddddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.project-container h1 {
-  font-size: 20px;
-  color: #4CAF50;
-  margin-bottom: 15px;
-}
-
-/* Image Resizer Styling */
-.container input[type="file"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 14px;
-  color: #555;
-}
-
-.dimensions {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.dimensions label {
-  font-size: 14px;
-  color: #333;
-}
-
-.dimensions input[type="number"] {
-  width: 60px;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-  text-align: center;
-}
-
-canvas {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #fafafa;
-}
-
-/* Rock Paper Scissors Styling */
-.scoreboard {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-  font-size: 1.2rem;
-}
-
-.options-container button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-  margin: 0 5px;
-}
-
-.options-container button:hover {
-  background-color: #45a049;
-}
-
-.message-container p {
-  font-size: 1rem;
-  color: #555;
-  margin-top: 10px;
-}
-
-/* Shared Button Styling */
-.button, #reset-game-btn {
-  background: linear-gradient(to right, #ff824c, #4845e6); /* Gradient from one color to another */
-  color: white;
-  padding: 0.625rem 1.25rem; /* 10px 20px in rem */
-  border: none;
-  border-radius: 0.3125rem; /* 5px in rem */
-  cursor: pointer;
-  font-size: 1rem; /* Adjust font size */
-  transition: background 0.3s;
-  margin-top: 1.875rem; /* 30px in rem */
-}
-
-.button:hover, #reset-game-btn:hover {
-  background: linear-gradient(to right, #ff824c, #944cff); /* Change gradient on hover */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .projects-grid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-
-@media (max-width: 500px) {
-  .project-container {
-      padding: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  border-top-color: #00aaff;
   }
 
-  .project-container h1 {
-      font-size: 18px;
-  }
-
-  .button, #reset-game-btn {
-      font-size: 14px;
-      padding: 8px 16px;
-  }
-}
-
-.input-container {
+.project-grid-child {
+  background-color: #68b52500;
+  /* border-style: dotted; */
+  margin: 1rem;
+  border-color: black;
   display: flex;
   flex-direction: column;
-  margin: 2rem 0; 
+  }
+
+  /* CARD STYLES */
+  .project-grid-child:hover .flex-title,
+  .project-grid-child:hover .flex-content {
+  box-shadow: 
+  inset
+  0 0 20px rgba(254, 254, 254, 0.477),
+  0 0 40px rgba(0, 255, 255, 0.47);
 }
 
-.label-input {
-  display: flex; 
-  align-items: center; 
-  margin-bottom: 1rem;
+  .flex-title {
+    background-color: rgba(0, 0, 0, 0.463); 
+    border-radius: 2rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 3rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: 0.2rem double #0b0b0b5a;
+    backdrop-filter: blur(0.2rem) saturate(250%);
+    box-shadow: 
+      0 0 5px 4px black,
+      0 0 10px 10px rgba(2, 242, 254, 0.203),
+      inset 0 0 20px 1px rgba(255, 0, 0, 0.381); 
+  }
+
+  .flex-content {
+    margin: 2rem 0.5rem 0.5rem 0.5rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.224);
+    backdrop-filter: blur(0.2rem) saturate(150%);
+    border: 0.1rem solid rgba(15, 221, 225, 0.249);
+    border-radius: 1rem;
+    box-shadow: 
+    0 0 40px rgba(0, 0, 0, 0.29);
+  }
+
+  .flex-title h1 {
+    margin-top: 0.15rem;
+    color: #00ffe0;
+    font-size: 1.5rem;
+    font-family: 'Bad Script', cursive;
+      animation: pulsate 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulsate {
+    0% {
+        text-shadow: 
+            0 0 10px cyan,
+            0 0 20px rgb(47, 255, 0);
+    }
+    100% {
+        text-shadow: 
+            0 0 40px cyan,
+            0 0 80px rgb(47, 255, 0);
+    }
 }
 
-.label-input label {
-  font-weight: bold; 
-  margin-right: 0.5rem;
-  flex: 0 0 25%; 
-  max-width: 12rem; 
+/* PROJECT THREE */
+.flex-content img {
+  width: 100%;      /* Makes the image take up the full width of the parent */
+  height: auto;     /* Maintains the aspect ratio of the image */
+  border-radius: 0.5rem; /* Optional: Matches the border radius of the flex content */
+  border: 1.5px solid rgba(11, 238, 242, 0.879);
+  margin: 0;
 }
 
-.label-input input {
-  padding: 0.5rem; 
-  border: 1px solid #ddd;
-  border-radius: 0.25rem; 
-  font-size: 1rem;
-  flex: 1; 
-  min-width: 0; 
+.flex-content img:hover {
+  box-shadow: 0 0 15px red;
 }
 
-.information-board {
-  justify-content: space-around;
-  margin: 20px 0;
-  font-size: 1.2rem;
-}
-
-.information-board div {
-  padding: 0.2rem;
-}
-
-footer {
-  background-color: #333; /* Example background color */
-  color: white; /* Example text color */
-  text-align: center; /* Center text */
-  padding: 1rem; /* Add some padding */
-}
