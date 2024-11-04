@@ -1,4 +1,4 @@
-const projectThree = document.querySelector('#project-three')
+const projectThree = document.querySelector('#project-four')
 let calculateButton = projectThree.querySelector('#calculate-btn')
 
 

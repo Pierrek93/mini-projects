@@ -109,11 +109,16 @@ footer, footer a {
     }
 }
 
+/* BUTTONS STYLE */
+
+
+
+
 /* PROJECT THREE */
 .flex-content img {
-  width: 100%;      /* Makes the image take up the full width of the parent */
-  height: auto;     /* Maintains the aspect ratio of the image */
-  border-radius: 0.5rem; /* Optional: Matches the border radius of the flex content */
+  width: 100%;     
+  height: auto;    
+  border-radius: 0.5rem;
   border: 1.5px solid rgba(11, 238, 242, 0.879);
   margin: 0;
 }
@@ -122,3 +127,68 @@ footer, footer a {
   box-shadow: 0 0 15px red;
 }
 
+/* PROJECT SIX */
+.button-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.shadow-layer {
+  position: absolute;
+  top: -3px;
+  left: -6px;
+  width: calc(100% + 20px);
+  height: calc(100% + 0px);
+  background-color: rgba(0, 255, 255, 0.325);
+  clip-path: polygon(
+      69.7% 4.7%,
+      64.3% 6.2%,
+      55.3% 19%,
+      52.2% 21.7%,
+      47.1% 29.5%,
+      44.3% 31.30%,
+      41.8% 33.7%,
+      41.7% 34.5%,
+      41.3% 35.5%,
+      41.4% 37.3%,
+      41% 38%,
+      41.2% 39.2%,
+      39.9% 41.3%,
+      40% 42.2%,
+      38.6% 47.8%,
+      38.8% 49.6%,
+      39.4% 49.2%,
+      40.1% 50.6%,
+      39.9% 53.2%,
+      38.9% 54.6%,
+      39.2% 57.1%,
+      40.3% 56.2%,
+      41% 57.6%,
+      42.4% 57.5%,
+      45.2% 62.3%,
+      49% 63.2%,
+      51% 66.9%,
+      60.5% 63.7%,
+      64.2% 58%,
+      71.4% 56.1%,
+      72.9% 53.3%,
+      73.3% 45.4%,
+      72.8% 42%,
+      71.7% 42.1%,
+      73.8% 36.7%,
+      75.1% 36.1%,
+      75.8% 32.8%,
+      75.1% 26.5%,
+      74.1% 24.7%,
+      77.6% 21.7%,
+      78.2% 20.5%,
+      70.4% 5.3%
+  );
+  opacity: 0;
+  transition: opacity 0.4s;
+  cursor: pointer;
+}
+
+.button-wrapper:hover .shadow-layer {
+  opacity: 1; /* Show shadow on hover */
+}
