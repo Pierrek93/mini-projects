@@ -104,27 +104,19 @@
       <!-- Project 5 -->
       <div class="project-grid-child" id="project-five">
         <div class="flex-title">
-          <h1>World Clock API</h1>
+          <h1>Bitcoin/USDT Price API</h1>
         </div>
 
         <div class="flex-content">
-            <select id="country-select">
-              <option value="Europe/Brussels">Brussels, Belgium</option>
-              <option value="Europe/London">London, UK</option>
-              <option value="Asia/Bangkok">Bangkok, Thailand</option>
-              <option value="America/Buenos_Aires">Buenos Aires, Argentina</option>
-              <option value="Europe/Madrid">Madrid, Spain</option>
-            </select>
-
-            <div id="clock-display">Select a country to view the time</div> 
-
+          <button id="fetchPriceBtn"> fetch Price </button>
+          <span id="btcPrice"> Bitcoin Price</span>
         </div>
       </div>
 
       <!-- Project 6 -->
       <div class="project-grid-child" id="project-six">
         <div class="flex-title">
-          <h1>Pillar of Autumn Highlight</h1>
+          <h1>Highlight Infinity</h1>
         </div>
 
         <div class="flex-content">
@@ -161,7 +153,8 @@
   <script src="Spsgame.js"></script>
   <script src="Electricity.js"></script>
   <script src="cardzoom.js"></script>
-  <script src="worldClock.js"></script>
+  <script type="module" src="config.js"></script>
+  <script type="module" src="btcprice.js"></script>>
 </body>
 
 </html>

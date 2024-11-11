@@ -186,9 +186,9 @@ footer, footer a {
   );
   opacity: 0;
   transition: opacity 0.4s;
-  cursor: pointer;
+  pointer-events: none;
 }
 
 .button-wrapper:hover .shadow-layer {
-  opacity: 1; /* Show shadow on hover */
+  opacity: 1; 
 }
