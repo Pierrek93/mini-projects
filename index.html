@@ -21,9 +21,9 @@
         <div class="flex-content">
           <input type="file" id="fileInput" accept="image/*">
           <div class="dimensions">
-              <label for="width">Width:</label>
+              <label class="style-cyberpunk" for="width">Width:</label>
               <input type="number" id="width" placeholder="Width"><br>
-              <label for="height">Height:</label>
+              <label class="style-cyberpunk" for="height">Height:</label>
               <input type="number" id="height" placeholder="Height">
           </div>
           <button class="button" id="resize">Resize and Save</button>
@@ -38,8 +38,8 @@
         </div>
         <div class="flex-content">
           <div class="scoreboard">
-            <div>Player Score: <span id="player-score">0</span></div>
-            <div>Computer Score: <span id="computer-score">0</span></div>
+            <div class="style-cyberpunk">Player Score: <span id="player-score">0</span></div>
+            <div class="style-cyberpunk">Computer Score: <span id="computer-score">0</span></div>
           </div>
 
           <div class="options-container">
@@ -49,8 +49,8 @@
           </div>
 
           <div class="message-container">
-            <p id="results-msg"></p>
-            <p id="winner-msg" style="font-weight: bold; color: #333;"></p>
+            <p class="style-cyberpunk" id="results-msg"></p>
+            <p id="winner-msg" class="style-cyberpunk"></p>
           </div>
 
           <div>
@@ -80,21 +80,21 @@
 
         <div class="flex-content">
           <div class="information-board">
-            <div>Costs per day: <span class="currency">€ </span><span id="costs-per-day">0.00</span></div>
-            <div>Costs per month: <span class="currency">€ </span><span id="costs-per-month">0.00</span></div>
+            <div class="style-cyberpunk">Costs per day: <span class="currency">€ </span><span id="costs-per-day">0.00</span></div>
+            <div class="style-cyberpunk">Costs per month: <span class="currency">€ </span><span id="costs-per-month">0.00</span></div>
           </div>
       
           <div class="input-container">
             <div class="label-input">
-              <label for="power">Power in Watts:</label>
+              <label class="style-cyberpunk" for="power">Power in Watts:</label>
               <input type="number" id="power" placeholder="Enter Wattage">
             </div>
             <div class="label-input">
-              <label for="duration">Duration (per day in hours):</label>
+              <label class="style-cyberpunk" for="duration">Duration (per day in hours):</label>
               <input type="number" id="duration" placeholder="Enter Hours">
             </div>
             <div class="label-input">
-              <label for="price-kwh">Price of Kwh:</label>
+              <label class="style-cyberpunk" for="price-kwh">Price of Kwh:</label>
               <input type="number" id="price-kwh" placeholder="Enter Price">
             </div>
           </div>
@@ -109,7 +109,7 @@
 
         <div class="flex-content">
           <button class="button" id="fetchPriceBtn"> fetch Price </button>
-          <span class="currency">$ </span><span id="btcPrice"> Bitcoin Price</span>
+          <span class="style-cyberpunk currency">$ </span><span class="style-cyberpunk" id="btcPrice"> Bitcoin Price</span>
         </div>
       </div>
 
