@@ -11,6 +11,7 @@ const options = {
 
 async function fetchPrice() {
   const bitcoinPriceDisplayed = document.getElementById('btcPrice')
+  const xrpPriceDisplayed = document.getElementById(`xrpPrice`)
 
   try {
     const response = await fetch(url, options);
@@ -19,8 +20,11 @@ async function fetchPrice() {
       throw new Error ("Could not fetch price")
     }
     const data = await response.json()
-    const currentPrice = parseFloat(data[11].askPrice)
-    bitcoinPriceDisplayed.textContent = currentPrice.toFixed(2)
+    console.log(`data here`, data)
+    const currentBtcPrice = parseFloat(data[11].askPrice)
+    const currentXrpPrice = parseFloat(data[306].askPrice)
+    bitcoinPriceDisplayed.textContent = currentBtcPrice.toFixed(2)
+    xrpPriceDisplayed.textContent = currentXrpPrice.toFixed(2)
   }
   catch(error) {
     console.error(error)
@@ -28,4 +32,9 @@ async function fetchPrice() {
 }
 
 const getBitcoinPriceBtn = document.getElementById('fetchPriceBtn')
+
 getBitcoinPriceBtn.addEventListener('click', fetchPrice)
+
+// document.addEventListener(`DOMContentLoaded`, function () {
+//   fetchPrice();
+// })
