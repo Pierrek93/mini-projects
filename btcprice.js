@@ -1,10 +1,10 @@
-import { API_KEY } from './config.js';
+import { API_KEY_ONE } from './config.js';
 
 const url = 'https://binance43.p.rapidapi.com/ticker/24hr';
 const options = {
   method: 'GET',
   headers: {
-    'x-rapidapi-key': API_KEY,
+    'x-rapidapi-key': API_KEY_ONE,
     'x-rapidapi-host': 'binance43.p.rapidapi.com'
   }
 };

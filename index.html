@@ -104,7 +104,7 @@
       <!-- Project 5 -->
       <div class="project-grid-child" id="project-five">
         <div class="flex-title">
-          <h1>Bitcoin/USDT Price API</h1>
+          <h1>Price API</h1>
         </div>
 
         <div class="flex-content">
@@ -138,15 +138,27 @@
         </div>
 
         <div class="flex-content">
-          <label for="#" class="style-cyberpunk currency">Euros:</label>
-          <input placeholder="Enter Amount"> 
-          <select>
-            <option value="">Thai Bath</option>
-            <option value="">Norwegian Krona</option>
-            <option value="">Pounds</option>
-            <option value="">US Dollars</option>
-            <option value=""></option>
+          <label for="convert-from" class="style-cyberpunk currency">From:</label>
+          
+          <select id="convert-from">
+            <option value="EUR">Euros</option>
+            <option value="THB">Thai Baths</option>
+            <option value="NOK">Norwegian Kronas</option>
+            <option value="USD">British Pounds</option>
+            <option value="GBP">US Dollars</option>
           </select>
+          <input id="convert-amount" placeholder="Enter Amount" required> 
+          <br><br>
+
+          <label for="convert-to" class="style-cyberpunk currency">to:</label>
+          <select id="convert-to">
+            <option value="EUR">Euros</option>
+            <option value="THB">Thai Bath</option>
+            <option value="NOK">Norwegian Krona</option>
+            <option value="GBP">Pounds</option>
+            <option value="USD">US Dollars</option>
+          </select>
+
           <button class="button" id="convertBtn"> convert </button>
 
           <p> 1 euro is *insert currency* </p>
@@ -180,6 +192,7 @@
   <script src="cardzoom.js"></script>
   <script type="module" src="config.js"></script>
   <script type="module" src="btcprice.js"></script>>
+  <script type="module" src="currencyconvert.js"></script>
 </body>
 
 </html>
