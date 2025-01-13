@@ -138,30 +138,38 @@
         </div>
 
         <div class="flex-content">
-          <label for="convert-from" class="style-cyberpunk currency">From:</label>
-          
-          <select id="convert-from">
+          <label for="convert-amount" class="style-cyberpunk currency">Amount:</label>
+          <input id="convert-amount" placeholder="Enter Amount" required> <br>
+          <br>
+
+          <select class="currency-selection cyberpunk-dropdown" id="convert-from">
             <option value="EUR">Euros</option>
             <option value="THB">Thai Baths</option>
             <option value="NOK">Norwegian Kronas</option>
-            <option value="USD">British Pounds</option>
-            <option value="GBP">US Dollars</option>
+            <option value="GBP">British Pounds</option>
+            <option value="USD">US Dollars</option>
           </select>
-          <input id="convert-amount" placeholder="Enter Amount" required> 
-          <br><br>
-
+          <br>
           <label for="convert-to" class="style-cyberpunk currency">to:</label>
-          <select id="convert-to">
+          <br>
+          <select class="currency-selection cyberpunk-dropdown" id="convert-to">
             <option value="EUR">Euros</option>
-            <option value="THB">Thai Bath</option>
-            <option value="NOK">Norwegian Krona</option>
-            <option value="GBP">Pounds</option>
+            <option value="THB">Thai Baths</option>
+            <option value="NOK">Norwegian Kronas</option>
+            <option value="GBP">British Pounds</option>
             <option value="USD">US Dollars</option>
           </select>
 
           <button class="button" id="convertBtn"> convert </button>
 
-          <p> 1 euro is *insert currency* </p>
+          <br><br>
+
+          <div class="style-cyberpunk currency">
+            <span>Result:</span>
+            <span id="converted-result"> 0.00</span>
+            <span id="selected-currency-code">$</span>
+          </div>
+
         </div>
       </div>
 

@@ -227,3 +227,28 @@ input:focus {
 .button-wrapper:hover .shadow-layer {
   opacity: 1; 
 }
+
+
+/* PROJECT SEVEN */
+.cyberpunk-dropdown {
+  background-color: #000000be; 
+  color: #00ffcc; 
+  border: 2px solid red; 
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ff007f, 0 0 20px #00ffcc; 
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cyberpunk-dropdown:hover {
+  background-color: #0f0f0f;
+  box-shadow: 0 0 15px #ff007f, 0 0 25px #00ffcc; 
+  color: #ff0040; 
+}
+
+.cyberpunk-dropdown option {
+  background-color: #00000080; 
+  color: #00ffcc; 
+}
